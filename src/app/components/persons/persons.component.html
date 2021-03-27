@@ -1,0 +1,14 @@
+<!--<mat-selection-list #persons [multiple]="false">
+    <mat-list-option *ngFor="let person of persons" [value]="person">
+      {{person.name}} {{person.surname}}
+    </mat-list-option>
+  </mat-selection-list>-->
+
+<mat-selection-list #personlist [multiple]="false">
+  <mat-list-option
+    *ngFor="let person of persons"
+    [routerLink]="['/persons', person.id, 'details']"
+  >
+    <span>{{ person.name }} {{ person.surname }}</span>
+  </mat-list-option>
+</mat-selection-list>
