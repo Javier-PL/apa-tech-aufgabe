@@ -13,7 +13,7 @@
 
     <ng-container matColumnDef="duration">
       <th mat-header-cell *matHeaderCellDef>Dauer</th>
-      <td mat-cell *matCellDef="let task">{{ task.clock.time }}</td>
+      <td mat-cell *matCellDef="let task">{{ task.clock }}</td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

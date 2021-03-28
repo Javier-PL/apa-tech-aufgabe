@@ -15,7 +15,7 @@ export class TaskDetailsComponent implements OnInit {
     name: '',
     duration: -1,
     personsIds: [],
-    clock: { time: '' },
+    clock: '' 
   };
   routeId: number;
   persons: Person[] = [];
