@@ -4,11 +4,15 @@
     </mat-list-option>
   </mat-selection-list>-->
 
-<mat-selection-list #personlist [multiple]="false">
-  <mat-list-option
+  <div class="content" fxLayout="column"  fxLayoutAlign="center center" >
+
+<mat-selection-list #personlist [multiple]="false" class="table" [ngClass.lt-md]="'table-mobile'" >
+  <mat-list-option fxLayoutAlign="center"
     *ngFor="let person of persons"
     [routerLink]="['/persons', person.id, 'details']"
   >
     <span>{{ person.name }} {{ person.surname }}</span>
   </mat-list-option>
 </mat-selection-list>
+
+  </div>

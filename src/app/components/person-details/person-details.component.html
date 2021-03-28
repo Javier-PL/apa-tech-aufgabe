@@ -1,9 +1,12 @@
-<mat-card>
-  <h2>Person details</h2>
+<div class="content" fxLayout="column" fxLayoutGap="20px" fxLayoutAlign="center center" >
+
+
+<mat-card class="details" [ngClass.lt-md]="'details-mobile'">
+  <h2>Personendetails </h2>
   <div>{{ person.name }} {{ person.surname }}</div>
 </mat-card>
 
-<mat-card>
+<mat-card class="assigned" [ngClass.lt-md]="'assigned-mobile'">
   <h2>Zugeteilte Augaben</h2>
 
   <mat-selection-list [multiple]="false">
@@ -16,3 +19,5 @@
     </mat-list-option>
   </mat-selection-list>
 </mat-card>
+
+</div>

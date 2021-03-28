@@ -11,7 +11,6 @@ const appRoutes: Routes = [
   { path: 'tasks', component: TasksComponent },
   { path: 'persons/:id/details', component: PersonDetailsComponent },
   { path: 'tasks/:id/details', component: TaskDetailsComponent }
-  
 ];
 
 @NgModule({

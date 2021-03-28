@@ -1,5 +1,4 @@
 @import '~@angular/material/theming';
-@import './apa-variables.scss';
 @import './apa-palettes.scss';
 @import './apa-typography.scss';
 
@@ -9,9 +8,6 @@
 // have to load a single css file for Angular Material in your app.
 // **Be sure that you only ever include this mixin once!**
 @include mat-core();
-
-// Define the theme.
-
 
 $apa-primary: mat-palette($md-apa-blue-palette, 500);
 $apa-secondary: mat-palette($md-apa-grey-palette, 500);
@@ -25,28 +21,12 @@ $apa-theme:   mat-light-theme((
  )
 ));
 
-// "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-
-//$checkbox-mark-color: mat-color($apa-primary, $apa-primary);
-
 @include angular-material-typography($custom-typography);
 
-// Include the theme styles for only specified components.
 @include mat-core-theme($apa-theme);
 @include angular-material-theme($apa-theme);
-
-/*
-@include mat-button-theme($apa-theme);
-@include mat-checkbox-theme($apa-theme);
-@include mat-form-field-theme($apa-theme); // Form-Field theme
-@include mat-input-theme($apa-theme);  */
-
-//$primary: map-get($apa-theme ,primary);
-//$accent: map-get($app-theme, accent);
 
 :root {
   --color-primary: #{mat-color($apa-primary)};
   --color-secondary: #{mat-color($apa-secondary)};
- // --color-warn: #{mat-color($app-warn)};
- // --color-success: #{mat-color($app-success)};
 }

@@ -1,20 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
-import { PersonsComponent } from './components/persons/persons.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { HttpClientModule } from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
+import { AppMaterialModule } from './app-material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
-
+import { PersonsComponent } from './components/persons/persons.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { PersonDetailsComponent } from './components/person-details/person-details.component';
-import { LocalDataService } from './services/local-data.service';
 import { TaskDetailsComponent } from './components/task-details/task-details.component';
-import { AppMaterialModule } from './app-material.module';
+import { LocalDataService } from './services/local-data.service';
+
 
 
 @NgModule({
@@ -23,16 +21,17 @@ import { AppMaterialModule } from './app-material.module';
     PersonsComponent,
     TasksComponent,
     PersonDetailsComponent,
-    TaskDetailsComponent
+    TaskDetailsComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    AppMaterialModule 
+    AppMaterialModule,
+    FlexLayoutModule,
   ],
   providers: [LocalDataService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
