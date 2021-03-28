@@ -1,23 +1,25 @@
-<div class="content" fxLayout="column" fxLayoutGap="20px" fxLayoutAlign="center center" >
+<div
+  class="content"
+  fxLayout="column"
+  fxLayoutGap="20px"
+  fxLayoutAlign="center center"
+>
+  <mat-card class="details" [ngClass.lt-md]="'details-mobile'">
+    <h2>Personendetails</h2>
+    <div>{{ person.name }} {{ person.surname }}</div>
+  </mat-card>
 
+  <mat-card class="assigned" [ngClass.lt-md]="'assigned-mobile'">
+    <h2>Zugeteilte Augaben</h2>
 
-<mat-card class="details" [ngClass.lt-md]="'details-mobile'">
-  <h2>Personendetails </h2>
-  <div>{{ person.name }} {{ person.surname }}</div>
-</mat-card>
-
-<mat-card class="assigned" [ngClass.lt-md]="'assigned-mobile'">
-  <h2>Zugeteilte Augaben</h2>
-
-  <mat-selection-list [multiple]="false">
-    <mat-list-option
-      *ngFor="let task of tasks"
-      [value]="task"
-      [routerLink]="['/tasks', task.id, 'details']"
-    >
-      {{ task.name }} {{ task.clock.time }}
-    </mat-list-option>
-  </mat-selection-list>
-</mat-card>
-
+    <mat-selection-list [multiple]="false">
+      <mat-list-option
+        *ngFor="let task of tasks"
+        [value]="task"
+        [routerLink]="['/tasks', task.id, 'details']"
+      >
+        {{ task.name }} - {{ task.clock.time }}
+      </mat-list-option>
+    </mat-selection-list>
+  </mat-card>
 </div>

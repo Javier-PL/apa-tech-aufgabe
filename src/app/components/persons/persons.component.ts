@@ -12,6 +12,8 @@ export class PersonsComponent implements OnInit {
 
   persons: Person[] = [];
 
+  displayedColumns: string[] = ['name', 'surname'];
+
   ngOnInit(): void {
     this.localDataService.getPersons().subscribe(
       (data: Person[]) => {
