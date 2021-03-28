@@ -14,3 +14,6 @@ In the views of persons and tasks, a click on an object will navigate to a relat
 
 Methods that I discarded:
 - Another option would have been using the routerlink and passing the object through the state. This would spare retrieving the object but would lose the state data if a page refresh is triggered which is not user friendly. 
+
+-No child routes
+If you want to have a different view (component load) when you go to persons to persons/:id/details you need to go with defining a second route with full path. Otherwise you should be working with children components
