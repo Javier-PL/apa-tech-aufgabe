@@ -23,19 +23,17 @@ export class TaskDetailsComponent implements OnInit {
   constructor(
     private localDataService: LocalDataService,
     private activatedRoute: ActivatedRoute
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(
       (params) => {
         this.routeId = parseInt(params['id']);
 
-        console.log(this.routeId);
 
         this.localDataService
           .getTaskById(this.routeId)
           .subscribe((data: Task) => {
-            console.log(data);
             this.task = data;
             this.task.clock = this.localDataService.millisecondsToClock(
               this.task.duration
@@ -49,7 +47,6 @@ export class TaskDetailsComponent implements OnInit {
 
     this.localDataService.getPersons().subscribe(
       (data: Person[]) => {
-        console.log(data);
         this.persons = data.filter((person) =>
           this.task.personsIds.includes(person.id)
         );

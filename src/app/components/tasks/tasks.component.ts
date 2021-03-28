@@ -17,7 +17,6 @@ export class TasksComponent implements OnInit {
   ngOnInit(): void {
     this.localDataService.getTasks().subscribe(
       (data: Task[]) => {
-        console.log(data);
         this.tasks = data;
         this.tasks.forEach(
           (task) =>

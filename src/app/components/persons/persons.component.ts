@@ -8,7 +8,7 @@ import { Person } from '../../models/person.model';
   styleUrls: ['./persons.component.scss'],
 })
 export class PersonsComponent implements OnInit {
-  constructor(private localDataService: LocalDataService) {}
+  constructor(private localDataService: LocalDataService) { }
 
   persons: Person[] = [];
 
